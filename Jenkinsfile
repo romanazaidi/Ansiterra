@@ -2,7 +2,7 @@ node{
     
 
     stage('git checkout'){
-        git 'https://github.com/StaragileDevops/Terransible'
+        git 'https://github.com/romanazaidi/Ansiterra'
         
     }
     
@@ -17,13 +17,11 @@ node{
     
      stage('Plan Terraform'){
          
-         withCredentials([string(credentialsId: 'AWS_ACCESS_KEY_ID', variable: '')]) {
-
-        withCredentials([string(credentialsId: 'AWS_SECRET_ACCESS_KEY', variable: '')]) {
+         
     
         sh 'terraform plan'
-        }
-         }
+        
+         
      }
         
     
